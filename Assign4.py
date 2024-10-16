@@ -36,9 +36,6 @@ def loadData(airportFile, flightFile):
                 allFlights[origin].append(temp)
             else:
                 allFlights[origin] = [temp]
-            print(allFlights)
-
-        
 
     except:
         return False
@@ -120,5 +117,3 @@ def findReturnFlight(firstFlight):
         if flightB_destination == flightA_origin:
             return i    # return flight object that departs from origin B and arrives in destination A
     return -1   # If there is no such Flight object that goes in the opposite direction as firstFlight, just return -1.
-
-loadData("airport.txt","flights.txt")
